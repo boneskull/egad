@@ -1,6 +1,6 @@
 {
   "name": "egad",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Compile a Git repo full of Handlebars templates",
   "main": "index.js",
   "author": "Christopher Hiller <boneskull@boneskull.com> (https://boneskull.com/)",
