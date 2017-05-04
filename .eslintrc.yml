@@ -1,0 +1,13 @@
+extends:
+  - xo
+rules:
+  indent:
+    - error
+    - 2
+  new-cap: off
+  space-before-function-paren:
+    - error
+    - always
+  operator-linebreak:
+    - error
+    - before
