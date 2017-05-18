@@ -138,17 +138,22 @@ function generate (source, dest, data = {}, opts = {}) {
         })
           .then(() => {
             debug(`Wrote ${destFilepath}`);
-            return destFilepath;
+            return {
+              path: destFilepath,
+              skipped: false
+            };
           })
           .catch(err => {
             if (err.code === 'EEXIST') {
               debug(`Skipping ${destFilepath}; already exists`);
-              return;
+              return {
+                path: destFilepath,
+                skipped: true
+              };
             }
             throw err;
           }));
-    })))
-    .then(_.compact);
+    })));
 }
 
 /**
